@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Pagina con Pug
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
+    body
+        nav.navbar.navbar-light.bg-info 
+            a(href="#" style="color:white;font-size:24px") App Products
+        .container#container
+            .row.p-4
+                .col-md-6.p-3(style="background:#ccc") 
+                    form#formProduct(action="")
+                        label Nombre
+                        input.form-control#nombre(type="text") 
+                        label Precio
+                        input.form-control#precio(type="number" value="0") 
+                        label Categoria
+                        input.form-control#categoria(type="text")
+                        button.btn.btn-danger.btn-block.mt-2(type="submit") Guardar
+                .col-md-5.ml-2(style="background:#ccc")#listProducts
+                    h3 Lista de Productos
+        script(src="main.js")
